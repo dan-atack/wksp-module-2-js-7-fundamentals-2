@@ -34,7 +34,24 @@ const friendsAge = { 'Kevin': 32, 'Rick': 60, 'Morty': 14, 'Jerry': 35 }
 
 ```js
 // Example - I need to display just the names in a list
-const friendsAge = { 'Kevin': 32, 'Rick': 60, 'Morty': 14, 'Jerry': 35 }
+const friendsAge = { 'Kevin': 32, 'Rick': 60, 'Morty': 14, 'Jerry': 35 };
+
+// you can iterate through a list of an object's keys with a forEach loop for example:
+
+let friendNames = Object.keys(friendsAge);
+
+Object.keys(friendsAge).forEach(friend => {
+    console.log(friend);
+});
+
+let friends = [
+    {name: "rick", age: 60},
+    {name: "morty", age: 14},
+    {name: "jerry", age: 35},
+];
+
+friends.sort((a,b) => a.age - b.age);
+
 ```
 
----
+-
