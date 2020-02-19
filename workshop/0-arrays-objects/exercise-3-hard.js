@@ -10,3 +10,11 @@ const colors = ["red", "orange", "yellow", "green", "pink", "black", "gray", "bl
 
 // You must console the colors array.
 // NO for loops!
+
+const colorEliminator = color => {  // is this inelegant?
+    if (color == "red" || color == "orange" || color == "yellow" ||  color == "green" || color == "blue" || color == "violet") return color;
+}
+
+let specColors = colors.filter(colorEliminator);
+
+console.log(specColors);

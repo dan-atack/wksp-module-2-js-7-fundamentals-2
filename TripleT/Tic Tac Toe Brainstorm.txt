@@ -1,0 +1,16 @@
+Tic Tac Toe Brainstorm
+
+// * Stage I: Create the board: Purely an HTML job
+// * Board will consist of 9 divs within another div
+// - Will be formatted by css later.
+// Also have a paragraph on the side that says whose turn it is.
+
+// Javascript Start:
+
+// Cells are clickable
+// Clicking a cell adds a symbol (just Xs to start)
+// Clicking a cell changes the next symbol to be placed, and the turn indicator paragraph.
+// Add a button to reset the board.
+// Create an array representing the values of each cell in JS
+// Each turn, use a switch statement to evaluate whether a player has won..
+//       (join array and compare vs 8 possible victory strings)

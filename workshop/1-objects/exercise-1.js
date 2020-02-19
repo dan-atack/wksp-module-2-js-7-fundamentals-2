@@ -16,6 +16,25 @@
 //     monthOfBirth: 'July'
 // }
 
+let myObject = {
+    name: {
+        first: "Dan",
+        last: "Atack"
+    },
+    age: 31,
+    city: "Montreal",
+    siblings: 1,
+    petName: "Molly",
+    monthOfBirth: "May",
+    passions: ["coding", "cartooning", "minecraft"],
+    favoriteTeacher: "Scott Morin",
+    codingSong: "Computerwelt by Kraftwerk"
+};
+
+console.log(myObject);
+console.log(myObject.name.first);
+console.log(myObject.petName);
+
 // A) console.log() your object.
 // B) console.log() a few of the values in the object.
 
@@ -31,6 +50,11 @@
 //     - Pets (number of pets, names of pets, etc.)
 
 // HINT: You can just modify the object that you created before.
+
+myObject.pseudonym = "Diggy D";
+
+console.log(myObject.codingSong);
+console.log(myObject.pseudonym);
 
 //-------------------------------------------------
 
@@ -48,8 +72,12 @@
 // represent a collection of similar things?
 
 var favoriteMovie = {
-
-}
+    title: "The Matrix",
+    Director: "The Wachowski Brothers",
+    yearReleased: 1999,
+    rating: 8.5,
+    actors: ["Keanu Reeves", "Carrie-Anne Moss", "Lawrence Fishbourne", "Hugo Weaving"]
+};
 
 
 //-------------------------------------------------
@@ -65,8 +93,8 @@ const person = {
     hometown: "somewhere"
 };
 
-person[age];    // => 26
-person.key;     // => "Alyssa P. Hacker"
+person.age;    // => 26
+person[key];     // => "Alyssa P. Hacker"
 
 
 //-------------------------------------------------
@@ -89,8 +117,11 @@ const alyssa = {
 };
 
 function fullName(person) {
-    // Your code here
-
+    let keys = Object.keys(person.name);
+    console.log(keys);
+    let name = "";
+    keys.forEach(key => {name += `${person.name[key]} `});
+    return name;
 }
 
 console.log(fullName(alyssa)); // => "Alyssa P. Hacker"
@@ -114,8 +145,10 @@ const rick = {
 };
 
 function betterFullName(person) {
-    // Your code here
-
+    let keys = Object.keys(person.name);
+    let name = "";
+    keys.forEach(key => {name += `${person.name[key]} `});
+    return name;
 }
 
 console.log(betterFullName(rick)); // => "Rick Sanchez"
